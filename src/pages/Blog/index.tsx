@@ -1,4 +1,12 @@
-import { BlogContainer, ProfileBox, ProfileInfo } from "./styled";
+import {
+  BlogContainer,
+  CardContainer,
+  ProfileBiography,
+  ProfileHeader,
+  ProfileInfo,
+  ProfileInfoBox,
+  ProfileInfoContainer,
+} from "./styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowUpRightFromSquare,
@@ -6,28 +14,31 @@ import {
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import avatar from "../../assets/avatar.png";
+import { Search } from "./search";
+import Card from "../../components/Card";
 
 export function Blog() {
   return (
     <BlogContainer>
-      <ProfileBox>
+      <ProfileInfoContainer>
         <div className="profileImage">
-          <img src="" alt="" />
+          <img src={avatar} alt="Foto de perfil de Cameron Williamson" />
         </div>
-        <ProfileInfo>
-          <div className="header">
-            <h3>Cameron Williamson </h3>
+        <ProfileInfoBox>
+          <ProfileHeader>
+            <h1>Cameron Williamson</h1>
             <button>
-              <span>github</span>
+              <span>GITHUB</span>
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </button>
-          </div>
-          <div className="description">
+          </ProfileHeader>
+          <ProfileBiography>
             Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
             viverra massa quam dignissim aenean malesuada suscipit. Nunc,
             volutpat pulvinar vel mass.
-          </div>
-          <div className="info">
+          </ProfileBiography>
+          <ProfileInfo>
             <span>
               <FontAwesomeIcon icon={faGithub} />
               cameronwll
@@ -40,9 +51,18 @@ export function Blog() {
               <FontAwesomeIcon icon={faUserGroup} />
               32 seguidores
             </span>
-          </div>
-        </ProfileInfo>
-      </ProfileBox>
+          </ProfileInfo>
+        </ProfileInfoBox>
+      </ProfileInfoContainer>
+      <Search />
+      <CardContainer>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </CardContainer>
     </BlogContainer>
   );
 }

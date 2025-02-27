@@ -3,10 +3,8 @@ import background from "../../assets/background.png";
 
 export const HeaderContainer = styled.header`
   display: flex;
-  align-items: center;
   justify-content: center;
   height: 18.5rem;
-  position: relative;
 
   background-color: ${({ theme }) => theme.baseProfile};
 
@@ -14,4 +12,10 @@ export const HeaderContainer = styled.header`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  img {
+    margin-top: 64px;
+    width: 9.25rem;
+    height: 6.125rem;
+  }
 `;
