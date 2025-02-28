@@ -12,6 +12,7 @@ export const PostBox = styled.div`
   padding: 2rem;
   border-radius: 10px;
   margin-top: -5.5rem;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.2);
 
   h1 {
     font-size: 1.5rem;
@@ -52,21 +53,14 @@ export const PostInfo = styled.div`
 export const PostContent = styled.div`
   padding: 2.5rem 2rem;
   p {
+    color: ${({ theme }) => theme.baseText};
+    line-height: 160%;
     margin-bottom: 1rem;
   }
-  h2 {
+  a {
     margin-top: 2rem;
     color: ${({ theme }) => theme.blue};
     font-size: 1rem;
-  }
-
-  pre {
-    background-color: ${({ theme }) => theme.basePost};
-    padding: 1rem;
-    border-radius: 2px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    text-decoration: underline;
   }
 `;

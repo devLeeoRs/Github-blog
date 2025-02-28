@@ -14,9 +14,17 @@ export const ProfileInfoContainer = styled.div`
   background: ${(props) => props.theme.baseProfile};
   margin-top: -5.5rem;
   position: relative;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 9.25rem;
+    height: 9.25rem;
+    border-radius: 0.5rem;
+  }
 `;
 
 export const ProfileInfoBox = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
 `;
@@ -43,6 +51,7 @@ export const ProfileHeader = styled.div`
 `;
 
 export const ProfileBiography = styled.div`
+  height: 3.125rem;
   margin-top: 0.5rem;
   line-height: 160%;
   color: ${({ theme }) => theme.baseText};

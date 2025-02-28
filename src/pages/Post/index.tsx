@@ -58,7 +58,7 @@ export function Post() {
           structures. Wherever possible, comparisons with other languages are
           drawn.
         </p>
-        <h2>Dynamic typing</h2>
+        <a>Dynamic typing</a>
         <p>
           JavaScript is a loosely typed and dynamic language. Variables in
           JavaScript are not directly associated with any particular value type,

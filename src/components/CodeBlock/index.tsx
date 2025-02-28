@@ -1,26 +1,15 @@
-import { useEffect, useRef } from "react";
-import hljs from "highlight.js";
-import "highlight.js/styles/github-dark.css"; // Você pode trocar por outro tema
+import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { SyntaxHighlighterStyled } from "./styled";
 
 interface CodeBlockProps {
   code: string;
   language?: string;
 }
 
-export function CodeBlock({ code, language = "javascript" }: CodeBlockProps) {
-  const codeRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    if (codeRef.current) {
-      hljs.highlightElement(codeRef.current);
-    }
-  }, [code]);
-
+export function CodeBlock({ code, language = "typescript" }: CodeBlockProps) {
   return (
-    <pre className="rounded-lg bg-gray-900 p-4 overflow-auto">
-      <code ref={codeRef} className={`language-${language}`}>
-        {code}
-      </code>
-    </pre>
+    <SyntaxHighlighterStyled language={language} style={atomOneDark}>
+      {code}
+    </SyntaxHighlighterStyled>
   );
 }
